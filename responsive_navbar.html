@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <title>BeeEBook.com</title>
+    <style>
+        .nav{
+            background: white;
+            width: 100%;
+            height: 100px;
+        }
+        .nav h3{
+          display: none;
+        }
+        .logo{
+            width: 100px;
+            height:100px;
+            margin-left: 1%;
+        }
+        .nav a{
+            text-decoration: none;
+            color: black;
+            font-family: Lucida Console;
+        }
+        .click{    
+            border: solid 2px gold;
+            text-align: center;
+            position: relative;
+            bottom: 40px;
+            margin-left: 5%;
+            margin-top: 55px;
+            padding: 20px;
+            border-radius: 5px;
+            background:gold;
+            width: 12%;
+        }
+        .click:hover{
+            background: white;
+            color: black;
+            border: gold solid 2px;
+            border-radius: 5%;
+            box-shadow: 4px 4px gold;
+        }
+        .hide1{
+            position: absolute;
+            top: 40px;
+            right: 1%;
+            display: none;
+            width: 30px;
+        }
+        .topbar{
+          display: none;
+        }
+        .searchbartop{
+            width: 100%;
+            margin-left: 0%;
+            background: whitesmoke;
+        }
+        .searchboxtop{
+            width: 75%;
+            height: 30px;
+            margin-left: 2%;
+        }
+        .searchbtntop{
+            width: 20%;
+            font-family: Lucida Console;
+            background: gold;
+            border: 1px gold solid;
+            height: 30px;
+            margin-left:1%;
+        }
+        .searchbtntop:hover{
+            background:black;
+            color: white;
+            border: 1px solid black;
+        }
+        @media screen and (max-width: 920px) {
+          .nav{
+            background: whitesmoke;
+          }
+            .click{
+                display: none;
+            }
+            .hide1{
+                display: block;
+                color: black;
+                border-radius: 4px;
+                background: gold;
+                border: gold 1px solid;
+            }
+            .hide1:hover{
+                background: whitesmoke;
+                border: 1px gold solid;
+            }
+            .searchbartop{
+                display: flex; align-items: center;
+                height: 50px;
+            }
+            .searchbtntop button{
+              text-align: center;
+              padding-right: 50%;
+            }
+        }
+        /*....................................
+        .sec{
+            display: none;
+        }
+        @media screen and (max-width: 920px) {
+            
+            .sec2{
+            background:white;    
+            position:relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding-top: 1px;
+            
+        }
+        .sec2 a{
+            text-decoration: none;
+            color: black;
+            font-family: Lucida Console;
+        }
+        .sec2 a:hover{
+            background: black;
+            color:white;
+            border: black solid 2px;
+        }
+        .sec2 .click2{
+          display: block;
+          border: 1px white solid;
+          width: 100%;
+          height: 40px;
+          margin-left: 0%;
+          padding-top: 6px;
+          text-align: center;
+          background-color: gold;
+          padding-bottom: 10px; 
+        }
+      } ..............................*/ 
+
+        @media  screen and (max-width:920px) {
+          .nav{
+            height: 50px;
+          }
+          .logo{
+            display: none;
+          }
+          .hide1{
+            top: 12px;
+          }
+          .nav h3{
+            display: block;
+          }
+        }
+
+        /*this is home*/
+        .home{
+            display: flex;
+            justify-content: space-between;
+            background-color: whitesmoke;
+            align-items: center;
+        }
+        .home1{
+            width: 50%;
+            margin-left: 50px;
+        }
+        .home2{
+            background: white;
+            width: 50%;
+        }
+        .searchbar{
+            background: white;
+            width: 250px; height: 50px; display: flex; align-items: center;
+        }
+        .searchbtn{
+            font-family: Lucida Console;
+            background: gold;
+            border: 1px gold solid;
+            height: 30px;
+            margin-left: 5px;
+        }
+        .searchbox{
+            height: 25px;
+            border: 1px white solid;
+            margin-left: 3px;
+        }
+        .searchbtn:hover{
+            background:white;
+            color: black;
+            border: 1px solid gold;
+            box-shadow: 4px 4px gold;
+        }
+        @media screen and (max-width: 920px) {
+            .home{
+                display: inline-block;
+            }
+            .home1{
+                margin-left: 5%;
+                width: 90%;
+                text-align: center;
+                display: none;
+            }
+            .home1 p br{
+              display: none;
+            }
+            .home2{
+                width: 94%;
+                background: whitesmoke;
+                margin-left: 3%;
+                margin-top: 1px;
+            }
+            .home2 img{
+                width: 100%;
+                height: auto;
+                border-radius: 20px;
+                
+            }
+            div .searchbar{
+                display: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body style="margin: 0%; background-color: whitesmoke;">
+    <!--THIS IS NAV BAR SECTION-->
+    <div class="nav" id="nav">
+        <h3 style="margin-left: 1%;margin-top:12px;" id="h1"><span style="color: white; background:gold;">Bee</span>EBook.com<p></h3>
+        <a href=""><img src="photo/logo2.png" alt="" class="logo"></a>
+        <a href="#home" class="click">Home</a>
+        <a href="#popular" class="click">Popular</a>
+        <a href="#new" class="click">New</a>
+        <a href="#Library" class="click">Library</a>
+        <a href="#Profile" class="click">Profile</a>
+        <button href="" class="hide1" onclick="myFunction()"><i class="fa fa-search"></i></button>
+        
+    </div>
+    <!--this also nav
+    <div id="hide2" class="sec">
+      <a href="#home" class="click2">Home</a>
+      <a href="#popular" class="click2">Popular</a>
+      <a href="#new" class="click2">New</a>
+      <a href="#free" class="click2">Free</a>
+      <a href="#random" class="click2">Random</a>
+  </div>-->
+
+    <div class="topbar" id="searchbar">
+        <input type="text" name="" id="search" placeholder="search" class="searchboxtop">
+        <button class="searchbtntop">Search</button>
+    </div>
+   
+
+    <!--THIS IS HOME PAGE SECTION-->
+    <div class="home" id="home">
+        <div class="home1">
+            <h1><span style="color:gold;">Bee</span> E Book Shop</h1>
+            <h3>Buy and sell your textbooks for the best price</h3>
+            <p>A bookstore is a store that sells books, and where <br>people can buy them. A used bookstore or <br> second-hand bookshop sells and often buys used books.</p>
+            <div class="searchbar">
+                <input type="text" name="" id="search" placeholder="search" class="searchbox">
+                <button class="searchbtn">Search</button>
+            </div>
+        </div>
+        <div class="home2">
+          <!--<img src="photo5.jpg" alt="" style="width: 100%;height:auto;"> -->
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img src="photo/collection1.jpg" class="d-block w-100" alt="..." style="width: 100%;height:auto;">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="photo/collection2.jpg" class="d-block w-100" alt="..." style="width: 100%;height:auto;">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="photo/collection5.jpg" class="d-block w-100" alt="..." style="width: 100%;height:auto;">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </div>
+    <!--<hr class="container" style="color: gold ; height:5px; background: black;margin-top: 50px;">-->
+
+
+    <!--THIS IS CATEGORIES SECTION-->
+    <div class="titlemore">
+      <span style="text-align: start; color:dimgray; margin-left: 5%;" id="categories" class="title">Categories</span>
+      <span class="more">More <i class="fa fa-angle-double-right"></i></span>
+    </div>
+    <div class="categories">
+      <div><a href="">ရောင်းအားအကောင်းဆုံးစာအုပ်များ</a></div>
+      <div><a href="">အောင်မြင်တိုးတက်ရေး</a></div>
+      <div><a href="">စိတ်ပညာနှင့်ဘဝပျော်ရွှင်မှု</a></div>
+      <div><a href="">စီးပွားရေးနှင့်စီမံခန့်ခွဲမှု</a></div>
+      <div><a href="">ရောင်းချမှုနှင့်မားကတ်တင်း</a></div>
+      <div><a href="">အထွေထွေအသိပညာ</a></div>
+      <div><a href="">ကျန်းမာရေးနှင့်အစားအသောက်</a></div>
+      <div><a href="">သမိုင်းနှင့်နိုင်ငံရေး</a></div>
+      <div><a href="">မိသားစုအချစ်ရေးနှင့်ပညာရေး</a></div>
+      <div><a href="">လက်ဆောင်စာအုပ်များ</a></div>
+    </div>
+    <div class="categories1">
+      <div class="show"><a href="">ရောင်းအားအကောင်းဆုံးစာအုပ်များ</a></div>
+      <div class="show"><a href="">အောင်မြင်တိုးတက်ရေး</a></div>
+      <div class="show"><a href="">စိတ်ပညာနှင့်ဘဝပျော်ရွှင်မှု</a></div>
+      <div class="show"><a href="">စီးပွားရေးနှင့်စီမံခန့်ခွဲမှု</a></div>
+      <div class="show"><a href="">ရောင်းချမှုနှင့်မားကတ်တင်း</a></div>
+    </div>
+    <div class="categories1">
+      <div class="show"><a href="">အထွေထွေအသိပညာ</a></div>
+      <div class="show"><a href="">ကျန်းမာရေးနှင့်အစားအသောက်</a></div>
+      <div class="show"><a href="">သမိုင်းနှင့်နိုင်ငံရေး</a></div>
+      <div class="show"><a href="">မိသားစုအချစ်ရေးနှင့်ပညာရေး</a></div>
+      <div class="show"><a href="">လက်ဆောင်စာအုပ်များ</a></div>
+    </div>
+
+
+    <!--THIS IS POPULAR SECTION-->
+    <div class="titlemore">
+      <span style="text-align: start; color:dimgray; margin-left: 5%;" id="popular" class="title">Popular</span>
+      <span class="more">More <i class="fa fa-angle-double-right"></i></span>
+    </div>
+    <div class="wrap">
+      <a href="">
+        <img src="photo/popular1.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/popular2.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/popular3.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/popular4jpg.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/popular5.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/popular6.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/popular7.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/popular8.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/popular9.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/popular10.jpg" alt="">
+      </a>
+    </div>
+    
+    
+
+    <!--THIS IS COLLECTION SECTION-->
+    <div class="titlemore">
+      <span style="text-align: start; color:dimgray; margin-left: 5%" id="" class="title">Collections</span>
+      <span class="more">More <i class="fa fa-angle-double-right"></i></span>
+    </div>
+    <div class="collection">
+      <a href="">
+        <img src="photo/collection6.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/collection8.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/collection3.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/collection1.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/collection2.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/collection4.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/collection7.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/collection5.jpg" alt="">
+      </a>
+    </div>
+
+
+
+
+    <!--THIS IS NEWLY SECTION-->
+    <div class="titlemore">
+      <span style="text-align: start; color:dimgray; margin-left: 5%;" id="new" class="title">Newly Added</span>
+      <span class="more">More <i class="fa fa-angle-double-right"></i></span>
+    </div>
+    <div class="newly">
+      <a href="">
+        <img src="photo/newly1.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/newly2.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/newly3.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/newly4.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/newly5.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/newly6.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/newly7.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/newly8.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/newly9.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/newly10.jpg" alt="">
+      </a>
+    </div>
+
+    
+
+
+    <!--THIS IS FREE SECTION-->
+    <div class="titlemore">
+      <span style="text-align: start; color:dimgray; margin-left: 5%;" id="free" class="title">Free Book</span>
+      <span class="more">More <i class="fa fa-angle-double-right"></i></span>
+    </div>
+    <div class="free">
+      <a href="">
+        <img src="photo/free1.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/free10.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/free2.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/free9.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/free3.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/free8.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/free4.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/free7.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/free5.jpg" alt="">
+      </a>
+      <a href="">
+        <img src="photo/free6.jpg" alt="">
+      </a>
+    </div>
+
+
+    <!--THIS IS RANDOM SECTION-->
+    <div class="titlemore">
+      <span style="text-align: start; color:dimgray; margin-left: 5%;" id="random" class="title">Random Books</span>
+    </div>
+    <div class="random">
+      <div class="">
+        <a href=""><img src="photo/shop1.webp" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/shop2.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/shop3.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/shop4.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/shop5.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/shop6.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/shop7.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/shop8jpg.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo9.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo10.webp" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo11.webp" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo12.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo9.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo9.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo9.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo9.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo9.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo9.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo9.jpg" alt=""></a>
+      </div>
+      <div class="">
+        <a href=""><img src="photo/photo9.jpg" alt=""></a>
+      </div>
+    </div>
+ 
+
+
+
+    <!--THIS IS FOOTER SECTION-->
+    <div class="footer">
+      <div class="company">
+        <h3 style="color: white;">Company</h3>
+        <ul style="list-style:square; color: white;">
+          <li>About us</li>
+          <li>Our services</li>
+          <li>Privacy policy</li>
+        </ul>
+      </div>
+      <div class="follow">
+        <h3 style="color: white;">Follow us</h3>
+        <ul style="list-style: square;color: white;">
+          <li><a href="" style="text-decoration: none; color: white;">Facebook</a> <i class="fa fa-facebook-official" style="color: gold;"></i></li>
+          <li><a href="" style="text-decoration: none; color: white;">Telegram</a> <i class="fa fa-telegram" style="color: gold;"></i></li>
+          <li><a href="" style="text-decoration: none; color: white;">Twitter</a> <i class="fa fa-twitter-square" style="color: gold;"></i></li>
+          <li><a href="" style="text-decoration: none; color: white;">Wechat</a> <i class="fa fa-wechat" style="color: gold;"></i></li>
+        </ul>
+      </div>
+      <div class="comment">
+        <h3 style="color: white;">Comment us</h3>
+        <textarea name="" id="" cols="30" rows="5" placeholder="comment here" style="color: white; background: whitesmoke;"></textarea><br>
+        <button class="btn btn-outline-warning" style="border: 2px solid gold;">Sent</button>
+      </div>
+    </div>
+
+    <div class="copy">
+      <p>Copyright&copy; 2023-2024 BeeEBook.com</p>
+    </div>
+
+
+    <!--THIS IS FOOTNAV-->
+    <div class="footnav sticky-bottom">
+      <div><a href="#nav" class="link-warning active"><i class="fa fa-university"></i><p>Home</p></a></div>
+      <div><a href="#categories"><i class="fa fa-th-large"></i><p>Categories</p></a></div>
+      <div><a href=""><i class="fa fa-columns"></i><p>Library</p></a></div>
+      <div><a href=""><i class="fa fa-user-circle-o"></i><p>Profile</p></a></div>
+    </div>
+
+
+</body>
+
+<script>
+    function myFunction() {
+        let one = document.getElementById("searchbar");
+        one.classList.toggle("searchbartop");
+    }
+</script>
+</html>
